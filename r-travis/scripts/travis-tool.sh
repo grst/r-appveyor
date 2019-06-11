@@ -248,7 +248,7 @@ InstallGithub() {
 
 InstallDeps() {
     EnsureRemotes
-    Rscript -e 'options(repos=c(CRAN="'"${CRAN}"'"), download.file.method="curl"); remotes::install_deps(dependencies = TRUE, type="'"${PKGTYPE}"'")'
+    Rscript -e 'options(repos=c(CRAN="'"${CRAN}"'"), download.file.method="wininet"); remotes::install_deps(dependencies = TRUE, type="'"${PKGTYPE}"'")'
 }
 
 InstallBiocDeps() {
